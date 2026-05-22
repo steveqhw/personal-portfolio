@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article>
+  <h2>{{ page.title }}</h2>
+
+  <table>
+    <tbody>
+      {% if page.year %}
+      <tr>
+        <th scope="row">Anno</th>
+        <td>{{ page.year }}</td>
+      </tr>
+      {% endif %}
+      {% if page.category %}
+      <tr>
+        <th scope="row">Categoria</th>
+        <td>{{ page.category }}</td>
+      </tr>
+      {% endif %}
+      {% if page.status %}
+      <tr>
+        <th scope="row">Stato</th>
+        <td>{{ page.status }}</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+
+  {{ content }}
+</article>
