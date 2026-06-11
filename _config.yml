@@ -1,21 +1,33 @@
-title: "Portfolio Hardware"
-description: "Portfolio personale di progetti hardware"
-author: "Stefano"
-url: ""
+title: "Stefano Quagliarella"
+description: "Embedded Electronic Hardware Designer — PCB design, prototyping, board bring-up, testing."
+author: "Stefano Quagliarella"
+
+# --- URL / hosting -----------------------------------------------------------
+# GitHub Pages project page (attuale):
+#   url:     "https://steveqhw.github.io"
+#   baseurl: "/personal-portfolio"
+# Quando colleghi il dominio steveqhw.com, sostituisci con:
+#   url:     "https://steveqhw.com"
+#   baseurl: ""
+url: "https://steveqhw.github.io"
 baseurl: "/personal-portfolio"
 
 permalink: pretty
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
+# Lingua di default usata dal layout quando page.lang non e' impostato
+lang: en
 
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
+# Esclusioni dal build pubblico
+exclude:
+  - handoff.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _data/*CV*
+  - _data/*cv*
 
 markdown: kramdown
+
+sass:
+  style: compressed

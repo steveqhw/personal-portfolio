@@ -1,0 +1,33 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.ui[lang] %}
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker"><span class="kicker-num">01</span>{{ t.about_kicker }}</p>
+      <h2 class="section-title">{{ t.about_title }}</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="lead">{{ t.about_lead }}</p>
+        <p>{{ t.about_body }}</p>
+        <p class="about-location">
+          <span aria-hidden="true">⌖</span>
+          {% if lang == 'it' %}{{ site.data.site.location_it }}{% else %}{{ site.data.site.location_en }}{% endif %}
+        </p>
+      </div>
+
+      <div class="about-tools reveal">
+        <p class="tools-title">{{ t.about_chips_title }}</p>
+        {% for group in site.data.toolbox %}
+          <div class="tool-group">
+            <p class="tool-group-label">{% if lang == 'it' %}{{ group.group_it }}{% else %}{{ group.group_en }}{% endif %}</p>
+            <ul class="chips">
+              {% for item in group.items %}<li class="chip">{{ item }}</li>{% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

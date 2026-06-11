@@ -1,0 +1,32 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.ui[lang] %}
+<section class="hero" id="top">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap hero-inner reveal">
+    <p class="kicker"><span class="kicker-dot"></span>{{ t.hero_kicker }}</p>
+    <h1 class="hero-title">
+      {{ t.hero_title_lead }} <span class="accent">{{ t.hero_title_accent }}</span>
+    </h1>
+    <p class="hero-subtitle">{{ t.hero_subtitle }}</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact">{{ t.hero_cta_primary }} <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#projects">{{ t.hero_cta_secondary }}</a>
+    </div>
+
+    <dl class="hero-stats">
+      <div class="stat">
+        <dt>{{ t.hero_stat_1_num }}</dt>
+        <dd>{{ t.hero_stat_1_label }}</dd>
+      </div>
+      <div class="stat">
+        <dt>{{ t.hero_stat_2_num }}</dt>
+        <dd>{{ t.hero_stat_2_label }}</dd>
+      </div>
+      <div class="stat">
+        <dt>{{ t.hero_stat_3_num }}</dt>
+        <dd>{{ t.hero_stat_3_label }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

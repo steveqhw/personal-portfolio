@@ -1,0 +1,38 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.ui[lang] %}
+<section class="section section-alt" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker"><span class="kicker-num">04</span>{{ t.projects_kicker }}</p>
+      <h2 class="section-title">{{ t.projects_title }}</h2>
+      <p class="section-lead">{{ t.projects_lead }}</p>
+    </div>
+
+    <div class="projects">
+      {% for p in site.data.projects %}
+        <article class="project-card reveal">
+          <div class="project-media">
+            {% if p.image and p.image != "" %}
+              <img src="{{ '/assets/images/' | append: p.image | relative_url }}"
+                   alt="{% if lang == 'it' %}{{ p.title_it }}{% else %}{{ p.title_en }}{% endif %}" loading="lazy">
+            {% else %}
+              <div class="project-placeholder" aria-hidden="true">
+                <span class="ph-grid"></span>
+                <span class="ph-label mono">{{ p.id }}</span>
+              </div>
+            {% endif %}
+            <span class="project-year mono">{{ p.year }}</span>
+          </div>
+          <div class="project-info">
+            <h3>{% if lang == 'it' %}{{ p.title_it }}{% else %}{{ p.title_en }}{% endif %}</h3>
+            <p class="project-role">{% if lang == 'it' %}{{ p.role_it }}{% else %}{{ p.role_en }}{% endif %}</p>
+            <p>{% if lang == 'it' %}{{ p.summary_it }}{% else %}{{ p.summary_en }}{% endif %}</p>
+            <ul class="chips chips-sm">
+              {% for s in p.stack %}<li class="chip">{{ s }}</li>{% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

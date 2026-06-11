@@ -1,0 +1,43 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.ui[lang] %}
+<section class="section section-contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-intro reveal">
+      <p class="kicker"><span class="kicker-num">05</span>{{ t.contact_kicker }}</p>
+      <h2 class="section-title">{{ t.contact_title }}</h2>
+      <p class="section-lead">{{ t.contact_lead }}</p>
+
+      <div class="contact-direct">
+        <a class="btn btn-ghost" href="{{ site.data.site.linkedin }}" target="_blank" rel="noopener">
+          {{ t.contact_or }} {{ t.contact_linkedin }} <span aria-hidden="true">↗</span>
+        </a>
+        {% if site.data.site.cv_file and site.data.site.cv_file != "" %}
+          <a class="btn btn-line" href="{{ site.data.site.cv_file | relative_url }}" download>
+            <span aria-hidden="true">↓</span> {{ t.contact_download_cv }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <form class="contact-form reveal"
+          action="https://formspree.io/f/{{ site.data.site.formspree_id }}"
+          method="POST">
+      <input type="hidden" name="_language" value="{{ lang }}">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+
+      <label class="field">
+        <span>{{ t.contact_name }}</span>
+        <input type="text" name="name" required autocomplete="name">
+      </label>
+      <label class="field">
+        <span>{{ t.contact_email }}</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label class="field">
+        <span>{{ t.contact_message }}</span>
+        <textarea name="message" rows="5" required placeholder="{{ t.contact_message_ph }}"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">{{ t.contact_send }} <span aria-hidden="true">→</span></button>
+    </form>
+  </div>
+</section>

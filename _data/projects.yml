@@ -1,0 +1,36 @@
+# Progetti personali / freelance — mostrabili per intero.
+# image: percorso relativo a /assets/images/ (carica tu le foto e indica il nome).
+#        Se vuoto, viene mostrato un placeholder grafico.
+
+- id: "hydroponic-frame"
+  title_en: "Hydroponic Living Frame Controller"
+  title_it: "Controller per Quadro Idroponico Vivente"
+  role_en: "Freelance — full hardware & control"
+  role_it: "Freelance — hardware e controllo completi"
+  year: "2024"
+  image: ""          # es. "hydroponic-frame.jpg"
+  summary_en: "Electronic control system for a decorative hydroponic living frame combining ornamental plants with automated feeding and control. Hardware design, component selection, prototyping and system integration."
+  summary_it: "Sistema di controllo elettronico per un quadro idroponico vivente decorativo che unisce piante ornamentali ad alimentazione e controllo automatizzati. Progettazione hardware, selezione componenti, prototipazione e integrazione di sistema."
+  stack: ["Control electronics", "Sensors", "Pump driving", "Embedded C"]
+
+- id: "positioning-machine"
+  title_en: "Industrial Positioning Machine Controller"
+  title_it: "Controller per Macchina di Posizionamento Industriale"
+  role_en: "Freelance — hardware, firmware & enclosure"
+  role_it: "Freelance — hardware, firmware ed enclosure"
+  year: "2023"
+  image: ""          # es. "positioning-machine.jpg"
+  summary_en: "Industrial controller driving a spindle to a precise angular position at a user-defined speed. Embedded control hardware, user-input logic and motor-driving strategy, with a custom enclosure designed and 3D printed in-house."
+  summary_it: "Controller industriale che porta un mandrino in una posizione angolare precisa a una velocità definita dall'utente. Hardware di controllo embedded, logica di input utente e strategia di pilotaggio motore, con enclosure custom progettata e stampata in 3D internamente."
+  stack: ["Motor control", "Embedded C", "HMI", "SolidWorks", "3D print"]
+
+- id: "3d-enclosures"
+  title_en: "3D-Printed Electronic Enclosures"
+  title_it: "Enclosure Elettroniche Stampate in 3D"
+  role_en: "Personal — mechanical integration"
+  role_it: "Personale — integrazione meccanica"
+  year: "2023–"
+  image: ""          # es. "3d-enclosures.jpg"
+  summary_en: "Ongoing line of custom enclosures, housings, PCB supports and connector panels integrated into the hardware workflow with SolidWorks and Fusion, improving fit between PCB, cabling, assembly and real-world usability."
+  summary_it: "Linea continua di enclosure custom, housing, supporti PCB e pannelli connettori integrati nel flusso di lavoro hardware con SolidWorks e Fusion, migliorando l'integrazione tra PCB, cablaggi, assemblaggio e usabilità reale."
+  stack: ["SolidWorks", "Fusion 360", "FDM 3D print", "DFA"]

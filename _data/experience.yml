@@ -1,0 +1,23 @@
+# Esperienza professionale — descrizioni GENERICHE (no dettagli coperti da NDA)
+
+- role_en: "Electronic Hardware Designer"
+  role_it: "Progettista Hardware Elettronico"
+  company: "Valuebiotech Srl"
+  place_en: "Agrate Brianza (MB), Italy · Medical robotics"
+  place_it: "Agrate Brianza (MB), Italia · Robotica medicale"
+  start: "2023"
+  end: "2024"
+  body_en: "Designed electronic hardware for a modular robotic platform in the minimally-invasive surgery field. Worked on multilayer and rigid-flex boards with controlled-impedance, GHz-range signal integrity and high-speed digital interfaces, defining requirements, architecture, schematics and PCB activities. Handled board bring-up, SMD rework, functional testing and lab validation, with design under IEC 60601-1 medical safety constraints and coordination of international suppliers."
+  body_it: "Ho progettato hardware elettronico per una piattaforma robotica modulare nell'ambito della chirurgia mininvasiva. Ho lavorato su schede multistrato e rigid-flex con impedenza controllata, signal integrity in banda GHz e interfacce digitali ad alta velocità, definendo requisiti, architettura, schematici e attività di PCB. Mi sono occupato di bring-up scheda, rework SMD, test funzionali e validazione in laboratorio, con progettazione secondo i vincoli di sicurezza medicale IEC 60601-1 e coordinamento di fornitori internazionali."
+  tags: ["Altium", "Rigid-flex", "High-speed", "IEC 60601-1", "Bring-up"]
+
+- role_en: "Electronic Hardware Designer"
+  role_it: "Progettista Hardware Elettronico"
+  company: "MC Solutions S.r.l."
+  place_en: "Vimercate (MB), Italy · Airfield ground lighting"
+  place_it: "Vimercate (MB), Italia · Illuminazione aeroportuale"
+  start: "2021"
+  end: "2023"
+  body_en: "Developed, improved and tested electronic systems for airfield ground lighting control and monitoring. Worked on power electronics, high-voltage AC loads, RMS/power measurement and control boards, with hands-on prototype assembly, SMD soldering, microscope rework and production testing to IPC workmanship practices. Handled troubleshooting, validation, supplier relationships, BOM and shortage management in a safety-relevant industrial environment."
+  body_it: "Ho sviluppato, migliorato e testato sistemi elettronici per il controllo e il monitoraggio dell'illuminazione aeroportuale a terra. Ho lavorato su elettronica di potenza, carichi AC ad alta tensione, misura RMS/potenza e schede di controllo, con assemblaggio prototipi, saldatura SMD, rework al microscopio e test di produzione secondo le pratiche IPC. Mi sono occupato di troubleshooting, validazione, rapporti con i fornitori, gestione BOM e shortage in un contesto industriale rilevante per la sicurezza."
+  tags: ["Power electronics", "High-voltage", "RMS/Power", "RS485/MODBUS", "IPC"]

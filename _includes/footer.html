@@ -1,7 +1,16 @@
+{% assign t = include.t %}
+{% assign lang = include.lang %}
 <footer class="site-footer">
-  <hr>
-  <p>
-    &copy; {{ "now" | date: "%Y" }} {{ site.author }}.
-    Ultimo aggiornamento: {{ "now" | date: "%Y-%m-%d" }}.
-  </p>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">SQ</span>
+      <span>{{ t.footer_built }}</span>
+    </div>
+    <div class="footer-links">
+      {% if site.data.site.linkedin %}<a href="{{ site.data.site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+      {% if site.data.site.github %}<a href="{{ site.data.site.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      <a href="#contact">{{ t.nav_contact }}</a>
+    </div>
+    <p class="footer-copy">&copy; {{ "now" | date: "%Y" }} Stefano Quagliarella. {{ t.footer_rights }}</p>
+  </div>
 </footer>

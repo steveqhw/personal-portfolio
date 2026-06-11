@@ -1,0 +1,19 @@
+# Informazioni globali (modificabili in un punto solo)
+
+# LinkedIn
+linkedin: "https://www.linkedin.com/in/stefano-quagliarella-17b667143/"
+
+# GitHub
+github: "https://github.com/steveqhw"
+
+# Formspree: crea un form gratuito su https://formspree.io e incolla qui il tuo ID
+# (sostituisci xxxxxxxx con il codice del tuo endpoint, es. "mvojzqkd")
+formspree_id: "xxxxxxxx"
+
+# CV scaricabile (carica il PDF in assets/files/ e indica il nome qui).
+# Lascia vuoto ("") per nascondere il bottone "Download CV".
+cv_file: "assets/files/Stefano_Quagliarella_CV.pdf"
+
+# Localizzazione professionale (mostrata, non l'indirizzo completo)
+location_en: "Brugherio (MB), Italy — open to remote & relocation"
+location_it: "Brugherio (MB), Italia — disponibile da remoto e al trasferimento"

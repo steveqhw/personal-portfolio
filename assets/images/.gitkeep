@@ -1,0 +1,3 @@
+# Carica qui le foto dei progetti (PCB, render 3D, banco prova, enclosure).
+# Poi indica il nome file nel campo "image:" di _data/projects.yml.
+# Formati consigliati: .jpg/.webp, lato lungo ~1600px, < 400 KB ciascuna.

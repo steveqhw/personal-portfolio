@@ -1,0 +1,31 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.ui[lang] %}
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker"><span class="kicker-num">03</span>{{ t.experience_kicker }}</p>
+      <h2 class="section-title">{{ t.experience_title }}</h2>
+      <p class="section-lead">{{ t.experience_lead }}</p>
+    </div>
+
+    <ol class="timeline">
+      {% for job in site.data.experience %}
+        <li class="timeline-item reveal">
+          <div class="timeline-period">
+            <span class="mono">{{ job.start }} — {% if job.end %}{{ job.end }}{% else %}{{ t.experience_present }}{% endif %}</span>
+          </div>
+          <div class="timeline-body">
+            <h3>{% if lang == 'it' %}{{ job.role_it }}{% else %}{{ job.role_en }}{% endif %}
+              <span class="at">· {{ job.company }}</span>
+            </h3>
+            <p class="timeline-place">{% if lang == 'it' %}{{ job.place_it }}{% else %}{{ job.place_en }}{% endif %}</p>
+            <p>{% if lang == 'it' %}{{ job.body_it }}{% else %}{{ job.body_en }}{% endif %}</p>
+            <ul class="chips chips-sm">
+              {% for tag in job.tags %}<li class="chip">{{ tag }}</li>{% endfor %}
+            </ul>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

@@ -3,3 +3,8 @@ _site/
 .jekyll-metadata
 .sass-cache/
 vendor/
+
+# CV personale (non pubblicare su GitHub)
+_data/Stefano_Quagliarella_ATS_CV_Compact_2pages_bold_keywords.md
+_data/*CV*
+_data/*cv*

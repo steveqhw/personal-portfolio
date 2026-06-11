@@ -1,0 +1,22 @@
+# Competenze/strumenti mostrati come chip nella sezione About.
+# Raggruppati: titolo per gruppo + lista item (uguali in IT/EN, sono tecnici).
+
+- group_en: "ECAD & CAD"
+  group_it: "ECAD & CAD"
+  items: ["Altium Designer", "KiCad", "LTspice", "SolidWorks", "Autodesk Fusion"]
+
+- group_en: "Hardware"
+  group_it: "Hardware"
+  items: ["Multilayer PCB", "Rigid-flex", "High-speed digital", "Controlled impedance", "Power electronics", "Signal integrity"]
+
+- group_en: "Lab & test"
+  group_it: "Lab & test"
+  items: ["Oscilloscope", "Logic analyzer", "VNA", "Spectrum analyzer", "EMI pre-compliance", "SMD rework"]
+
+- group_en: "Interfaces"
+  group_it: "Interfacce"
+  items: ["I2C", "SPI", "UART", "CAN", "RS485", "Ethernet", "MIPI CSI", "GMSL2", "MODBUS"]
+
+- group_en: "Firmware & standards"
+  group_it: "Firmware & standard"
+  items: ["Embedded C/C++", "Board bring-up", "IPC", "IEC 60601-1", "Git"]

@@ -1,0 +1,129 @@
+# Stringhe di interfaccia per lingua. page.lang = "en" | "it"
+
+en:
+  # navigazione
+  nav_about: "About"
+  nav_services: "Services"
+  nav_experience: "Experience"
+  nav_projects: "Projects"
+  nav_contact: "Contact"
+  lang_switch_label: "IT"
+  lang_switch_url: "/it/"
+  skip_to_content: "Skip to content"
+
+  # hero
+  hero_kicker: "Embedded Electronic Hardware Designer"
+  hero_title_lead: "Hardware that"
+  hero_title_accent: "actually ships."
+  hero_subtitle: "I take electronic boards through the full lifecycle — from requirements and schematic to PCB layout, prototype, bring-up and validated, tested hardware."
+  hero_cta_primary: "Start a project"
+  hero_cta_secondary: "View work"
+  hero_stat_1_num: "45–50"
+  hero_stat_1_label: "PCBs designed"
+  hero_stat_2_num: "3+ yrs"
+  hero_stat_2_label: "professional R&D"
+  hero_stat_3_num: "full"
+  hero_stat_3_label: "design lifecycle"
+
+  # about
+  about_kicker: "About"
+  about_title: "Hands-on engineer, end to end"
+  about_lead: "I'm Stefano, an embedded hardware designer based near Milan. I design and bring up electronic boards for medical, industrial and embedded applications — and I like owning the hard parts."
+  about_body: "Multilayer and rigid-flex PCBs, high-speed digital, controlled impedance and signal integrity, power electronics, and embedded firmware for board bring-up. I work daily in the lab with oscilloscopes, logic analyzers, VNA, spectrum analyzer and EMI pre-compliance setups, and I integrate 3D modeling and printing to build real, mountable prototypes — not just schematics."
+  about_chips_title: "Toolbox"
+
+  # services
+  services_kicker: "Services"
+  services_title: "What I can build for you"
+  services_lead: "Freelance and contract work for startups and companies that need electronics done properly."
+
+  # experience
+  experience_kicker: "Experience"
+  experience_title: "Where I've designed hardware"
+  experience_lead: "Selected professional roles. Project details are kept generic to respect client confidentiality (NDA)."
+  experience_present: "Present"
+
+  # projects
+  projects_kicker: "Selected work"
+  projects_title: "Personal & freelance projects"
+  projects_lead: "Projects I'm free to show in full — hardware, enclosures and control electronics designed and built end to end."
+  projects_role: "Role"
+  projects_year: "Year"
+  projects_stack: "Stack"
+
+  # contact
+  contact_kicker: "Contact"
+  contact_title: "Have a board to build?"
+  contact_lead: "Tell me about your project — PCB design, a prototype, a custom controller or a hardware review. I'll get back to you quickly."
+  contact_name: "Name"
+  contact_email: "Email"
+  contact_message: "Your project"
+  contact_message_ph: "What do you want to build? Constraints, deadline, quantities…"
+  contact_send: "Send message"
+  contact_or: "or reach me on"
+  contact_linkedin: "LinkedIn"
+  contact_download_cv: "Download CV"
+
+  # footer
+  footer_built: "Designed & built by Stefano Quagliarella"
+  footer_rights: "All rights reserved."
+
+it:
+  nav_about: "Chi sono"
+  nav_services: "Servizi"
+  nav_experience: "Esperienza"
+  nav_projects: "Progetti"
+  nav_contact: "Contatti"
+  lang_switch_label: "EN"
+  lang_switch_url: "/"
+  skip_to_content: "Vai al contenuto"
+
+  hero_kicker: "Progettista Hardware Elettronico Embedded"
+  hero_title_lead: "Hardware che"
+  hero_title_accent: "arriva in produzione."
+  hero_subtitle: "Seguo le schede elettroniche lungo tutto il ciclo di vita — dai requisiti e lo schematico al layout PCB, prototipo, bring-up e hardware validato e testato."
+  hero_cta_primary: "Avvia un progetto"
+  hero_cta_secondary: "Vedi i lavori"
+  hero_stat_1_num: "45–50"
+  hero_stat_1_label: "PCB progettate"
+  hero_stat_2_num: "3+ anni"
+  hero_stat_2_label: "R&D professionale"
+  hero_stat_3_num: "ciclo"
+  hero_stat_3_label: "completo di progetto"
+
+  about_kicker: "Chi sono"
+  about_title: "Ingegnere pratico, dall'inizio alla fine"
+  about_lead: "Sono Stefano, progettista hardware embedded nell'hinterland di Milano. Progetto e faccio il bring-up di schede elettroniche per applicazioni medicali, industriali ed embedded — e mi piace prendermi in carico le parti difficili."
+  about_body: "PCB multistrato e rigid-flex, digitale ad alta velocità, impedenza controllata e signal integrity, elettronica di potenza e firmware embedded per il bring-up delle schede. Lavoro ogni giorno in laboratorio con oscilloscopi, analizzatori logici, VNA, analizzatore di spettro e setup EMI pre-compliance, e integro modellazione e stampa 3D per costruire prototipi reali e montabili — non solo schematici."
+  about_chips_title: "Strumenti"
+
+  services_kicker: "Servizi"
+  services_title: "Cosa posso costruire per te"
+  services_lead: "Lavoro freelance e a contratto per startup e aziende che vogliono elettronica fatta bene."
+
+  experience_kicker: "Esperienza"
+  experience_title: "Dove ho progettato hardware"
+  experience_lead: "Ruoli professionali selezionati. I dettagli dei progetti sono generici per rispettare la riservatezza dei clienti (NDA)."
+  experience_present: "Oggi"
+
+  projects_kicker: "Lavori selezionati"
+  projects_title: "Progetti personali e freelance"
+  projects_lead: "Progetti che posso mostrare per intero — hardware, enclosure ed elettronica di controllo progettati e costruiti dall'inizio alla fine."
+  projects_role: "Ruolo"
+  projects_year: "Anno"
+  projects_stack: "Stack"
+
+  contact_kicker: "Contatti"
+  contact_title: "Hai una scheda da realizzare?"
+  contact_lead: "Raccontami il tuo progetto — design PCB, un prototipo, un controller custom o una revisione hardware. Ti rispondo in fretta."
+  contact_name: "Nome"
+  contact_email: "Email"
+  contact_message: "Il tuo progetto"
+  contact_message_ph: "Cosa vuoi realizzare? Vincoli, scadenze, quantità…"
+  contact_send: "Invia messaggio"
+  contact_or: "oppure scrivimi su"
+  contact_linkedin: "LinkedIn"
+  contact_download_cv: "Scarica il CV"
+
+  footer_built: "Progettato e realizzato da Stefano Quagliarella"
+  footer_rights: "Tutti i diritti riservati."
