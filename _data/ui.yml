@@ -40,7 +40,7 @@ en:
   # experience
   experience_kicker: "Experience"
   experience_title: "Where I've designed hardware"
-  experience_lead: "Selected professional roles. Project details are kept generic to respect client confidentiality (NDA)."
+  experience_lead: "Full-time, in-house roles as an employed hardware engineer. Company names are omitted and project details kept generic to respect confidentiality (NDA)."
   experience_present: "Present"
 
   # projects
@@ -65,7 +65,7 @@ en:
   contact_download_cv: "Download CV"
 
   # footer
-  footer_built: "Designed & built by Stefano Quagliarella"
+  footer_built: "Designed & built by Stefano Quagliarella and Claude Code"
   footer_rights: "All rights reserved."
 
 it:
@@ -103,7 +103,7 @@ it:
 
   experience_kicker: "Esperienza"
   experience_title: "Dove ho progettato hardware"
-  experience_lead: "Ruoli professionali selezionati. I dettagli dei progetti sono generici per rispettare la riservatezza dei clienti (NDA)."
+  experience_lead: "Ruoli da dipendente, a tempo pieno e interni all'azienda. I nomi delle aziende sono omessi e i dettagli dei progetti resi generici per rispettare la riservatezza (NDA)."
   experience_present: "Oggi"
 
   projects_kicker: "Lavori selezionati"
@@ -125,5 +125,5 @@ it:
   contact_linkedin: "LinkedIn"
   contact_download_cv: "Scarica il CV"
 
-  footer_built: "Progettato e realizzato da Stefano Quagliarella"
+  footer_built: "Progettato e realizzato da Stefano Quagliarella e Claude Code"
   footer_rights: "Tutti i diritti riservati."

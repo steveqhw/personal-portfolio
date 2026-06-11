@@ -16,7 +16,7 @@
           </div>
           <div class="timeline-body">
             <h3>{% if lang == 'it' %}{{ job.role_it }}{% else %}{{ job.role_en }}{% endif %}
-              <span class="at">· {{ job.company }}</span>
+              <span class="at">· {% if lang == 'it' %}{{ job.employer_it }}{% else %}{{ job.employer_en }}{% endif %}</span>
             </h3>
             <p class="timeline-place">{% if lang == 'it' %}{{ job.place_it }}{% else %}{{ job.place_en }}{% endif %}</p>
             <p>{% if lang == 'it' %}{{ job.body_it }}{% else %}{{ job.body_en }}{% endif %}</p>
