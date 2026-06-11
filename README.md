@@ -9,26 +9,22 @@ Quasi tutto si modifica dai file in **`_data/`**:
 
 | File | Cosa contiene |
 |------|---------------|
-| `_data/site.yml` | LinkedIn, GitHub, **ID Formspree**, nome del PDF del CV, località |
+| `_data/site.yml` | LinkedIn, GitHub, **ID Formspree**, località |
 | `_data/ui.yml` | Tutti i testi dell'interfaccia, in **IT e EN** (hero, titoli sezioni, bottoni) |
 | `_data/services.yml` | I servizi offerti (IT/EN) |
 | `_data/experience.yml` | Esperienze lavorative (descrizioni generiche, no NDA) |
 | `_data/projects.yml` | Progetti personali/freelance + nome delle foto |
 | `_data/toolbox.yml` | Competenze/strumenti mostrati come "chip" |
 
-### 1. Attivare il form di contatto
-1. Vai su <https://formspree.io>, crea un form gratuito.
-2. Copia il codice dell'endpoint (es. `mvojzqkd`).
-3. Incollalo in `_data/site.yml` → `formspree_id`.
+### 1. Form di contatto
+Già attivo via Formspree (`formspree_id` in `_data/site.yml`).
+Le email arrivano all'indirizzo configurato nell'account Formspree.
 
 ### 2. Aggiungere le foto dei progetti
 1. Carica le immagini in `assets/images/` (jpg/webp, lato lungo ~1600px).
 2. In `_data/projects.yml`, scrivi il nome file nel campo `image:` del progetto.
    Se lasci `image: ""` viene mostrato un placeholder grafico.
 
-### 3. CV scaricabile
-Carica il PDF **pubblico** in `assets/files/Stefano_Quagliarella_CV.pdf`
-(o cambia il nome in `_data/site.yml` → `cv_file`).
 ⚠️ Il CV completo in `_data/*.md` è in `.gitignore` e **non** viene pubblicato.
 
 ## Struttura
@@ -44,7 +40,6 @@ it/index.html            home in italiano        ( /it/ )
 assets/css/style.css     stile dark/tech
 assets/js/main.js        menu mobile, reveal, header sticky
 assets/images/           foto progetti
-assets/files/            CV pubblico in PDF
 ```
 
 ## Pubblicazione

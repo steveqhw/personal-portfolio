@@ -11,11 +11,6 @@
         <a class="btn btn-ghost" href="{{ site.data.site.linkedin }}" target="_blank" rel="noopener">
           {{ t.contact_or }} {{ t.contact_linkedin }} <span aria-hidden="true">↗</span>
         </a>
-        {% if site.data.site.cv_file and site.data.site.cv_file != "" %}
-          <a class="btn btn-line" href="{{ site.data.site.cv_file | relative_url }}" download>
-            <span aria-hidden="true">↓</span> {{ t.contact_download_cv }}
-          </a>
-        {% endif %}
       </div>
     </div>
 
