@@ -27,7 +27,7 @@ en:
 
   # about
   about_kicker: "About"
-  about_title: "Hands-on engineer, end to end"
+  about_title: "Hands-on hardware developer, end to end"
   about_lead: "I'm Stefano, an embedded hardware designer based near Milan. I design and bring up electronic boards for medical, industrial and embedded applications — and I like owning the hard parts."
   about_body: "Multilayer and rigid-flex PCBs, high-speed digital, controlled impedance and signal integrity, power electronics, and embedded firmware for board bring-up. I work daily in the lab with oscilloscopes, logic analyzers, VNA, spectrum analyzer and EMI pre-compliance setups, and I integrate 3D modeling and printing to build real, mountable prototypes — not just schematics."
   about_chips_title: "Toolbox"
@@ -40,7 +40,7 @@ en:
   # experience
   experience_kicker: "Experience"
   experience_title: "Where I've designed hardware"
-  experience_lead: "Full-time, in-house roles as an employed hardware engineer. Company names are omitted and project details kept generic to respect confidentiality (NDA)."
+  experience_lead: "Full-time, in-house roles as an employed hardware developer. Company names are omitted and project details kept generic to respect confidentiality (NDA)."
   experience_present: "Present"
 
   # projects
@@ -92,7 +92,7 @@ it:
   hero_stat_3_label: "completo di progetto"
 
   about_kicker: "Chi sono"
-  about_title: "Ingegnere pratico, dall'inizio alla fine"
+  about_title: "Sviluppatore hardware pratico, dall'inizio alla fine"
   about_lead: "Sono Stefano, progettista hardware embedded nell'hinterland di Milano. Progetto e faccio il bring-up di schede elettroniche per applicazioni medicali, industriali ed embedded — e mi piace prendermi in carico le parti difficili."
   about_body: "PCB multistrato e rigid-flex, digitale ad alta velocità, impedenza controllata e signal integrity, elettronica di potenza e firmware embedded per il bring-up delle schede. Lavoro ogni giorno in laboratorio con oscilloscopi, analizzatori logici, VNA, analizzatore di spettro e setup EMI pre-compliance, e integro modellazione e stampa 3D per costruire prototipi reali e montabili — non solo schematici."
   about_chips_title: "Strumenti"
