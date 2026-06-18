@@ -19,7 +19,7 @@
   role_en: "Freelance — hardware, firmware & enclosure"
   role_it: "Freelance — hardware, firmware ed enclosure"
   year: "2023"
-  image: ""          # es. "positioning-machine.jpg"
+  image: "progetto-posizionatore.jpeg"          # es. "positioning-machine.jpg"
   summary_en: "Industrial controller driving a spindle to a precise angular position at a user-defined speed. Embedded control hardware, user-input logic and motor-driving strategy, with a custom enclosure designed and 3D printed in-house."
   summary_it: "Controller industriale che porta un mandrino in una posizione angolare precisa a una velocità definita dall'utente. Hardware di controllo embedded, logica di input utente e strategia di pilotaggio motore, con enclosure custom progettata e stampata in 3D internamente."
   stack: ["Motor control", "Embedded C", "HMI", "SolidWorks", "3D print"]
