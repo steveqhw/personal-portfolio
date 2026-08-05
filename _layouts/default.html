@@ -2,16 +2,34 @@
 ---
 {% assign lang = page.lang | default: site.lang %}
 {% assign t = site.data.ui[lang] %}
+{% assign meta_title = page.title | default: site.title %}
+{% assign meta_description = page.description | default: site.description %}
+{% assign meta_image = nil %}
+{% if page.project_id %}
+  {% assign meta_project = site.data.projects | where: "id", page.project_id | first %}
+  {% if meta_project %}
+    {% if lang == 'it' %}
+      {% assign meta_title = meta_project.seo_title_it %}
+      {% assign meta_description = meta_project.seo_description_it %}
+    {% else %}
+      {% assign meta_title = meta_project.seo_title_en %}
+      {% assign meta_description = meta_project.seo_description_en %}
+    {% endif %}
+    {% if meta_project.image and meta_project.image != '' %}
+      {% assign meta_image = '/assets/images/' | append: meta_project.image %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% assign counterpart_url = page.counterpart_url | default: t.lang_switch_url %}
 <!doctype html>
 <html lang="{{ lang }}">
-  {% include head.html lang=lang t=t %}
+  {% include head.html lang=lang title=meta_title description=meta_description image=meta_image alternate_en=page.alternate_en alternate_it=page.alternate_it noindex=page.noindex %}
   <body>
     <a class="skip-link" href="#main">{{ t.skip_to_content }}</a>
-    {% include header.html lang=lang t=t %}
+    {% include header.html lang=lang t=t counterpart_url=counterpart_url %}
     <main id="main">
       {{ content }}
     </main>
     {% include footer.html lang=lang t=t %}
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>

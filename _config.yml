@@ -1,5 +1,5 @@
 title: "Stefano Quagliarella"
-description: "Embedded Electronic Hardware Designer — PCB design, prototyping, board bring-up, testing."
+description: "Embedded electronic hardware designer with professional R&D experience in PCB design, prototyping, board bring-up and laboratory validation."
 author: "Stefano Quagliarella"
 
 # --- URL / hosting -----------------------------------------------------------
@@ -14,11 +14,13 @@ baseurl: "/personal-portfolio"
 
 permalink: pretty
 
-# Lingua di default usata dal layout quando page.lang non e' impostato
+# Default locale when a page does not declare page.lang.
 lang: en
+encoding: utf-8
 
-# Esclusioni dal build pubblico
+# Never copy private/internal material into the public build.
 exclude:
+  - .agents
   - handoff.md
   - README.md
   - Gemfile
@@ -28,6 +30,3 @@ exclude:
   - _data/*cv*
 
 markdown: kramdown
-
-sass:
-  style: compressed

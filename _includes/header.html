@@ -1,31 +1,21 @@
 {% assign t = include.t %}
 {% assign lang = include.lang %}
 {% if lang == 'it' %}{% assign home = '/it/' %}{% else %}{% assign home = '/' %}{% endif %}
-<header class="site-header" data-header>
+<header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{{ home | relative_url }}">
-      <span class="brand-mark" aria-hidden="true">SQ</span>
-      <span class="brand-text">
-        <span class="brand-name">Stefano Quagliarella</span>
-        <span class="brand-role">{{ t.hero_kicker }}</span>
-      </span>
+      <span class="brand-mark">SQ / HW</span>
+      <span class="brand-name">Stefano Quagliarella</span>
     </a>
 
-    <nav class="site-nav" aria-label="Primary">
-      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-list" id="nav-list" data-nav-list>
-        <li><a href="#about">{{ t.nav_about }}</a></li>
-        <li><a href="#services">{{ t.nav_services }}</a></li>
-        <li><a href="#experience">{{ t.nav_experience }}</a></li>
-        <li><a href="#projects">{{ t.nav_projects }}</a></li>
-        <li><a class="nav-contact" href="#contact">{{ t.nav_contact }}</a></li>
-        <li class="nav-lang">
-          <a href="{{ t.lang_switch_url | relative_url }}" aria-label="Switch language">
-            <span class="globe" aria-hidden="true">◑</span> {{ t.lang_switch_label }}
-          </a>
-        </li>
+    <nav class="site-nav" aria-label="{{ t.primary_navigation_label }}">
+      <ul class="nav-list">
+        <li><a href="{{ home | relative_url }}#work">{{ t.nav_projects }}</a></li>
+        <li><a href="{{ home | relative_url }}#profile">{{ t.nav_about }}</a></li>
+        <li><a href="{{ home | relative_url }}#capabilities">{{ t.nav_services }}</a></li>
+        <li><a href="{{ home | relative_url }}#trajectory">{{ t.nav_experience }}</a></li>
+        <li><a href="{{ home | relative_url }}#contact">{{ t.nav_contact }}</a></li>
+        <li><a class="language-link" href="{{ include.counterpart_url | relative_url }}" hreflang="{% if lang == 'it' %}en{% else %}it{% endif %}" lang="{% if lang == 'it' %}en{% else %}it{% endif %}" aria-label="{{ t.lang_switch_aria }}">{{ t.lang_switch_short }}</a></li>
       </ul>
     </nav>
   </div>

@@ -1,22 +1,26 @@
-# Competenze/strumenti mostrati come chip nella sezione About.
-# Raggruppati: titolo per gruppo + lista item (uguali in IT/EN, sono tecnici).
+# Public technical scope, grouped for quick recruiter scanning.
 
-- group_en: "ECAD & CAD"
-  group_it: "ECAD & CAD"
+- id: "ecad-cad"
+  group_en: "ECAD, simulation and CAD"
+  group_it: "ECAD, simulazione e CAD"
   items: ["Altium Designer", "KiCad", "LTspice", "SolidWorks", "Autodesk Fusion"]
 
-- group_en: "Hardware"
-  group_it: "Hardware"
+- id: "board-design"
+  group_en: "Board design"
+  group_it: "Progettazione schede"
   items: ["Multilayer PCB", "Rigid-flex", "High-speed digital", "Controlled impedance", "Power electronics", "Signal integrity"]
 
-- group_en: "Lab & test"
-  group_it: "Lab & test"
+- id: "lab-validation"
+  group_en: "Laboratory and validation"
+  group_it: "Laboratorio e validazione"
   items: ["Oscilloscope", "Logic analyzer", "VNA", "Spectrum analyzer", "EMI pre-compliance", "SMD rework"]
 
-- group_en: "Interfaces"
-  group_it: "Interfacce"
+- id: "interfaces"
+  group_en: "Interfaces and protocols"
+  group_it: "Interfacce e protocolli"
   items: ["I2C", "SPI", "UART", "CAN", "RS485", "Ethernet", "MIPI CSI", "GMSL2", "MODBUS"]
 
-- group_en: "Firmware & standards"
-  group_it: "Firmware & standard"
-  items: ["Embedded C/C++", "Board bring-up", "IPC", "IEC 60601-1", "Git"]
+- id: "firmware-production"
+  group_en: "Firmware, production and standards"
+  group_it: "Firmware, produzione e standard"
+  items: ["Embedded C/C++", "Board bring-up", "BOM management", "DFM/DFA/DFT", "IPC practices", "IEC 60601-1 design constraints", "Git"]

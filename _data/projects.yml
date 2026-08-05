@@ -1,36 +1,174 @@
-# Progetti personali / freelance — mostrabili per intero.
-# image: percorso relativo a /assets/images/ (carica tu le foto e indica il nome).
-#        Se vuoto, viene mostrato un placeholder grafico.
+# Public bilingual project dossiers. Every claim below is derived from existing
+# public project data or the approved private factual source. Quantitative test
+# results, schematics and confidential implementation details are not inferred.
 
 - id: "hydroponic-frame"
+  slug_en: "hydroponic-living-frame-controller"
+  slug_it: "controller-quadro-idroponico"
+  path_en: "/work/hydroponic-living-frame-controller/"
+  path_it: "/it/work/controller-quadro-idroponico/"
   title_en: "Hydroponic Living Frame Controller"
   title_it: "Controller per Quadro Idroponico Vivente"
-  role_en: "Freelance — full hardware & control"
-  role_it: "Freelance — hardware e controllo completi"
+  role_en: "Freelance — hardware and control scope"
+  role_it: "Freelance — ambito hardware e controllo"
   year: "2024"
-  image: ""          # es. "hydroponic-frame.jpg"
-  summary_en: "Electronic control system for a decorative hydroponic living frame combining ornamental plants with automated feeding and control. Hardware design, component selection, prototyping and system integration."
-  summary_it: "Sistema di controllo elettronico per un quadro idroponico vivente decorativo che unisce piante ornamentali ad alimentazione e controllo automatizzati. Progettazione hardware, selezione componenti, prototipazione e integrazione di sistema."
+  image: ""
+  image_alt_en: ""
+  image_alt_it: ""
+  media_status: "not_publicly_available"
+  summary_en: "Control electronics for a decorative hydroponic living frame, covering hardware design, component selection, prototyping and system integration."
+  summary_it: "Elettronica di controllo per un quadro idroponico vivente decorativo, con progettazione hardware, selezione componenti, prototipazione e integrazione di sistema."
   stack: ["Control electronics", "Sensors", "Pump driving", "Embedded C"]
+  seo_title_en: "Hydroponic Living Frame Controller — Technical dossier"
+  seo_title_it: "Controller per Quadro Idroponico — Dossier tecnico"
+  seo_description_en: "Public technical dossier for control electronics developed for a decorative hydroponic living frame."
+  seo_description_it: "Dossier tecnico pubblico dell'elettronica di controllo sviluppata per un quadro idroponico vivente decorativo."
+  context_en: "The project concerned a decorative living frame that combines ornamental plants with automated hydroponic feeding and control."
+  context_it: "Il progetto riguardava un quadro vivente decorativo che unisce piante ornamentali ad alimentazione e controllo idroponici automatizzati."
+  verified_facts_en:
+    - "The system combines a decorative living frame with automated hydroponic feeding and control."
+    - "The assigned scope included hardware design, component selection, prototyping and system integration."
+    - "The public technical areas are control electronics, sensors, pump driving and Embedded C."
+  verified_facts_it:
+    - "Il sistema combina un quadro vivente decorativo con alimentazione e controllo idroponici automatizzati."
+    - "L'ambito assegnato comprendeva progettazione hardware, selezione componenti, prototipazione e integrazione di sistema."
+    - "Gli ambiti tecnici pubblici sono elettronica di controllo, sensori, pilotaggio pompa ed Embedded C."
+  approach_en:
+    - "Translate the feeding and control needs into an electronic control scope."
+    - "Select components and prototype the control electronics."
+    - "Integrate the electronic functions with the sensor and pump-driving portions of the system."
+  approach_it:
+    - "Tradurre le esigenze di alimentazione e controllo in un ambito di controllo elettronico."
+    - "Selezionare i componenti e prototipare l'elettronica di controllo."
+    - "Integrare le funzioni elettroniche con le parti di sensoristica e pilotaggio della pompa."
+  deliverables_en:
+    - "Control-electronics design scope"
+    - "Component selection and prototype work"
+    - "Electronic system-integration contribution"
+  deliverables_it:
+    - "Ambito di progettazione dell'elettronica di controllo"
+    - "Selezione componenti e attività di prototipazione"
+    - "Contributo all'integrazione del sistema elettronico"
+  public_evidence_en:
+    - "Public bilingual project description and declared technical scope"
+    - "No project image is currently approved for public use"
+  public_evidence_it:
+    - "Descrizione pubblica bilingue del progetto e dell'ambito tecnico dichiarato"
+    - "Al momento nessuna immagine del progetto è approvata per uso pubblico"
+  evidence_limits_en: "Circuit diagrams, component identifiers, firmware, photographs and quantitative validation results are not available for publication. The dossier therefore describes scope and method without claiming measured performance."
+  evidence_limits_it: "Schemi elettrici, codici dei componenti, firmware, fotografie e risultati quantitativi di validazione non sono disponibili per la pubblicazione. Il dossier descrive quindi ambito e metodo senza dichiarare prestazioni misurate."
 
 - id: "positioning-machine"
+  slug_en: "industrial-positioning-machine-controller"
+  slug_it: "controller-macchina-posizionamento-industriale"
+  path_en: "/work/industrial-positioning-machine-controller/"
+  path_it: "/it/work/controller-macchina-posizionamento-industriale/"
   title_en: "Industrial Positioning Machine Controller"
   title_it: "Controller per Macchina di Posizionamento Industriale"
-  role_en: "Freelance — hardware, firmware & enclosure"
+  role_en: "Freelance — hardware, firmware and enclosure"
   role_it: "Freelance — hardware, firmware ed enclosure"
   year: "2023"
-  image: "progetto-posizionatore.jpeg"          # es. "positioning-machine.jpg"
-  summary_en: "Industrial controller driving a spindle to a precise angular position at a user-defined speed. Embedded control hardware, user-input logic and motor-driving strategy, with a custom enclosure designed and 3D printed in-house."
-  summary_it: "Controller industriale che porta un mandrino in una posizione angolare precisa a una velocità definita dall'utente. Hardware di controllo embedded, logica di input utente e strategia di pilotaggio motore, con enclosure custom progettata e stampata in 3D internamente."
+  image: "progetto-posizionatore.jpeg"
+  image_alt_en: "Industrial positioning setup with the custom controller enclosure, user interface and spindle mechanism on a workshop bench."
+  image_alt_it: "Sistema di posizionamento industriale con enclosure del controller custom, interfaccia utente e meccanismo del mandrino su un banco di lavoro."
+  media_status: "public_image_available"
+  summary_en: "An embedded controller that moves a spindle to a precise angular position at a user-defined speed, with custom control hardware, firmware logic and a 3D-printed enclosure."
+  summary_it: "Un controller embedded che porta un mandrino a una posizione angolare precisa alla velocità definita dall'utente, con hardware di controllo, logica firmware ed enclosure stampata in 3D."
   stack: ["Motor control", "Embedded C", "HMI", "SolidWorks", "3D print"]
+  seo_title_en: "Industrial Positioning Machine Controller — Technical dossier"
+  seo_title_it: "Controller per Macchina di Posizionamento — Dossier tecnico"
+  seo_description_en: "Public technical dossier for an industrial positioning controller with embedded control and a custom enclosure."
+  seo_description_it: "Dossier tecnico pubblico di un controller industriale di posizionamento con controllo embedded ed enclosure custom."
+  context_en: "The machine required a controller able to move a spindle to a defined angular position at a speed chosen by the user."
+  context_it: "La macchina richiedeva un controller capace di portare un mandrino a una posizione angolare definita alla velocità scelta dall'utente."
+  verified_facts_en:
+    - "The controller targets precise angular spindle positioning at a user-defined speed."
+    - "The personal scope covered embedded control hardware, user-input logic and motor-driving strategy."
+    - "The enclosure was designed and 3D printed as part of the project."
+  verified_facts_it:
+    - "Il controller è destinato al posizionamento angolare preciso del mandrino alla velocità definita dall'utente."
+    - "L'ambito personale comprendeva hardware di controllo embedded, logica di input utente e strategia di pilotaggio motore."
+    - "L'enclosure è stata progettata e stampata in 3D come parte del progetto."
+  approach_en:
+    - "Coordinate the hardware, firmware and user-input portions around the positioning objective."
+    - "Develop the motor-control strategy and embedded interaction logic."
+    - "Design the enclosure around the controller, controls and physical integration needs."
+  approach_it:
+    - "Coordinare hardware, firmware e input utente attorno all'obiettivo di posizionamento."
+    - "Sviluppare la strategia di controllo motore e la logica di interazione embedded."
+    - "Progettare l'enclosure attorno al controller, ai comandi e alle esigenze di integrazione fisica."
+  deliverables_en:
+    - "Embedded control hardware"
+    - "Firmware and user-input logic"
+    - "Motor-driving control strategy"
+    - "Custom designed and 3D-printed enclosure"
+  deliverables_it:
+    - "Hardware di controllo embedded"
+    - "Firmware e logica di input utente"
+    - "Strategia di pilotaggio motore"
+    - "Enclosure custom progettata e stampata in 3D"
+  public_evidence_en:
+    - "Public photograph of the controller, enclosure and positioning setup"
+    - "Bilingual project description and declared technical scope"
+  public_evidence_it:
+    - "Fotografia pubblica del controller, dell'enclosure e del sistema di posizionamento"
+    - "Descrizione bilingue del progetto e dell'ambito tecnico dichiarato"
+  evidence_limits_en: "Schematics, source code, component identifiers, control tolerances and measured positioning results are not available for publication. The words precise and user-defined describe the project objective, not a published performance specification."
+  evidence_limits_it: "Schematici, codice sorgente, codici dei componenti, tolleranze di controllo e risultati misurati del posizionamento non sono disponibili per la pubblicazione. I termini preciso e definita dall'utente descrivono l'obiettivo del progetto, non una specifica prestazionale pubblicata."
 
 - id: "3d-enclosures"
+  slug_en: "3d-printed-electronic-enclosures"
+  slug_it: "enclosure-elettroniche-stampate-3d"
+  path_en: "/work/3d-printed-electronic-enclosures/"
+  path_it: "/it/work/enclosure-elettroniche-stampate-3d/"
   title_en: "3D-Printed Electronic Enclosures"
   title_it: "Enclosure Elettroniche Stampate in 3D"
-  role_en: "Personal — mechanical integration"
-  role_it: "Personale — integrazione meccanica"
-  year: "2023–"
-  image: ""          # es. "3d-enclosures.jpg"
-  summary_en: "Ongoing line of custom enclosures, housings, PCB supports and connector panels integrated into the hardware workflow with SolidWorks and Fusion, improving fit between PCB, cabling, assembly and real-world usability."
-  summary_it: "Linea continua di enclosure custom, housing, supporti PCB e pannelli connettori integrati nel flusso di lavoro hardware con SolidWorks e Fusion, migliorando l'integrazione tra PCB, cablaggi, assemblaggio e usabilità reale."
-  stack: ["SolidWorks", "Fusion 360", "FDM 3D print", "DFA"]
+  role_en: "Personal work — mechanical integration"
+  role_it: "Attività personale — integrazione meccanica"
+  year_en: "2023–present"
+  year_it: "2023–oggi"
+  image: ""
+  image_alt_en: ""
+  image_alt_it: ""
+  media_status: "not_publicly_available"
+  summary_en: "An ongoing body of custom housings, PCB supports and connector panels used to integrate electronics, cabling and assembly constraints into functional prototypes."
+  summary_it: "Un'attività continuativa su housing custom, supporti PCB e pannelli connettori per integrare elettronica, cablaggi e vincoli di assemblaggio in prototipi funzionali."
+  stack: ["SolidWorks", "Autodesk Fusion", "FDM 3D print", "DFA"]
+  seo_title_en: "3D-Printed Electronic Enclosures — Technical dossier"
+  seo_title_it: "Enclosure Elettroniche Stampate in 3D — Dossier tecnico"
+  seo_description_en: "Public technical dossier for ongoing electronic enclosure and mechanical-integration work."
+  seo_description_it: "Dossier tecnico pubblico dell'attività continuativa su enclosure elettroniche e integrazione meccanica."
+  context_en: "Since 2023, 3D modelling and printing have been integrated into the electronic hardware workflow to address enclosure, support, connector and assembly needs."
+  context_it: "Dal 2023, modellazione e stampa 3D sono integrate nel flusso di sviluppo hardware elettronico per rispondere a esigenze di enclosure, supporto, connettori e assemblaggio."
+  verified_facts_en:
+    - "The work includes custom enclosures, housings, PCB supports and connector panels."
+    - "SolidWorks and Autodesk Fusion are used for the mechanical design work."
+    - "The purpose is to improve integration between PCB, cabling, assembly and real-world use."
+  verified_facts_it:
+    - "L'attività include enclosure custom, housing, supporti PCB e pannelli connettori."
+    - "SolidWorks e Autodesk Fusion sono utilizzati per la progettazione meccanica."
+    - "L'obiettivo è migliorare l'integrazione tra PCB, cablaggi, assemblaggio e utilizzo reale."
+  approach_en:
+    - "Model the enclosure or support around PCB, connector, cabling and assembly constraints."
+    - "Use additive manufacturing to produce the physical part for fit and integration work."
+    - "Feed mechanical observations back into the combined electronics and enclosure workflow."
+  approach_it:
+    - "Modellare enclosure o supporti attorno ai vincoli di PCB, connettori, cablaggi e assemblaggio."
+    - "Usare la produzione additiva per realizzare la parte fisica destinata alle verifiche di integrazione."
+    - "Riportare le osservazioni meccaniche nel flusso combinato di elettronica ed enclosure."
+  deliverables_en:
+    - "Custom electronic housings and enclosures"
+    - "PCB supports and connector panels"
+    - "3D-printed mechanical prototypes"
+  deliverables_it:
+    - "Housing ed enclosure elettroniche custom"
+    - "Supporti PCB e pannelli connettori"
+    - "Prototipi meccanici stampati in 3D"
+  public_evidence_en:
+    - "Bilingual description of the recurring design scope and toolchain"
+    - "No representative project gallery is currently approved for public use"
+  public_evidence_it:
+    - "Descrizione bilingue dell'ambito progettuale ricorrente e della toolchain"
+    - "Al momento nessuna galleria rappresentativa è approvata per uso pubblico"
+  evidence_limits_en: "CAD files, dimensions, fit-check records and a representative public image set are not available. The dossier therefore presents the recurring workflow and deliverable types rather than a single measured product result."
+  evidence_limits_it: "File CAD, quote, registrazioni delle verifiche di integrazione e un set rappresentativo di immagini pubbliche non sono disponibili. Il dossier presenta quindi il flusso ricorrente e i tipi di deliverable, non il risultato misurato di un singolo prodotto."

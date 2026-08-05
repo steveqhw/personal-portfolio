@@ -1,14 +1,29 @@
-# Informazioni globali (modificabili in un punto solo)
+# Public profile and integration data. Keep private contact details and employer
+# identities out of this file.
 
-# LinkedIn
+name: "Stefano Quagliarella"
+
+role_en: "Embedded Electronic Hardware Designer"
+role_it: "Progettista Hardware Elettronico Embedded"
+
 linkedin: "https://www.linkedin.com/in/stefano-quagliarella-17b667143/"
-
-# GitHub
 github: "https://github.com/steveqhw"
 
-# Formspree: ID del form di contatto (https://formspree.io/f/<ID>)
+# Existing public Formspree endpoint. The form field contract is documented in
+# artifacts/ui/component-contracts.md.
 formspree_id: "mrevyznn"
 
-# Localizzazione professionale (mostrata, non l'indirizzo completo)
-location_en: "Brugherio (MB), Italy — open to remote & relocation"
-location_it: "Brugherio (MB), Italia — disponibile da remoto e al trasferimento"
+location_en: "Milan metropolitan area, Italy"
+location_it: "Area metropolitana di Milano, Italia"
+
+availability_en: "Open to full-time embedded hardware and electronics R&D opportunities, including relocation."
+availability_it: "Disponibile per opportunità full-time in hardware embedded e R&D elettronica, anche con trasferimento."
+
+education_en: "Full-time B.Eng. studies in Electronics Engineering, 2024–present; expected graduation 2027."
+education_it: "Laurea triennale in Ingegneria Elettronica a tempo pieno, 2024–oggi; laurea prevista nel 2027."
+
+professional_details_en: "Employer identities and additional professional details are available privately during the recruitment process."
+professional_details_it: "Le identità dei datori di lavoro e ulteriori dettagli professionali sono disponibili privatamente durante il processo di selezione."
+
+privacy_url_en: "/privacy/"
+privacy_url_it: "/it/privacy/"

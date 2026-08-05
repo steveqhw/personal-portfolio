@@ -1,32 +1,25 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign t = site.data.ui[lang] %}
-<section class="hero" id="top">
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="wrap hero-inner reveal">
-    <p class="kicker"><span class="kicker-dot"></span>{{ t.hero_kicker }}</p>
-    <h1 class="hero-title">
-      {{ t.hero_title_lead }} <span class="accent">{{ t.hero_title_accent }}</span>
-    </h1>
-    <p class="hero-subtitle">{{ t.hero_subtitle }}</p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#contact">{{ t.hero_cta_primary }} <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="#projects">{{ t.hero_cta_secondary }}</a>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ t.hero_kicker }}</p>
+      <h1 id="hero-title">{{ t.hero_title_lead }} <em>{{ t.hero_title_accent }}</em></h1>
+      <p class="hero-summary">{{ t.hero_subtitle }}</p>
+      <p class="availability"><span aria-hidden="true"></span>{{ t.hero_availability }}</p>
+      <div class="actions">
+        <a class="button button-primary" href="#work">{{ t.hero_cta_primary }}</a>
+        <a class="text-link" href="#contact">{{ t.hero_cta_secondary }} <span aria-hidden="true">→</span></a>
+      </div>
     </div>
-
-    <dl class="hero-stats">
-      <div class="stat">
-        <dt>{{ t.hero_stat_1_num }}</dt>
-        <dd>{{ t.hero_stat_1_label }}</dd>
-      </div>
-      <div class="stat">
-        <dt>{{ t.hero_stat_2_num }}</dt>
-        <dd>{{ t.hero_stat_2_label }}</dd>
-      </div>
-      <div class="stat">
-        <dt>{{ t.hero_stat_3_num }}</dt>
-        <dd>{{ t.hero_stat_3_label }}</dd>
-      </div>
-    </dl>
+    <aside class="hero-brief" aria-label="{% if lang == 'it' %}Sintesi del profilo{% else %}Profile summary{% endif %}">
+      <p class="brief-label">{% if lang == 'it' %}Profilo / 2026{% else %}Profile / 2026{% endif %}</p>
+      <p>{{ t.hero_context }}</p>
+      <dl class="evidence-stats">
+        <div><dt>{{ t.hero_stat_1_num }}</dt><dd>{{ t.hero_stat_1_label }}</dd></div>
+        <div><dt>{{ t.hero_stat_2_num }}</dt><dd>{{ t.hero_stat_2_label }}</dd></div>
+        <div><dt>{{ t.hero_stat_3_num }}</dt><dd>{{ t.hero_stat_3_label }}</dd></div>
+      </dl>
+    </aside>
   </div>
 </section>

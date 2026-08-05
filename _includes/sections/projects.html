@@ -1,35 +1,52 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign t = site.data.ui[lang] %}
-<section class="section section-alt" id="projects">
+<section class="section section-work" id="work" aria-labelledby="work-title">
   <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker"><span class="kicker-num">04</span>{{ t.projects_kicker }}</p>
-      <h2 class="section-title">{{ t.projects_title }}</h2>
-      <p class="section-lead">{{ t.projects_lead }}</p>
-    </div>
+    <header class="section-heading">
+      <p class="section-index">01 / {{ t.projects_kicker }}</p>
+      <div>
+        <h2 id="work-title">{{ t.projects_title }}</h2>
+        <p>{{ t.projects_lead }}</p>
+      </div>
+    </header>
 
-    <div class="projects">
+    <div class="project-index">
       {% for p in site.data.projects %}
-        <article class="project-card reveal">
+        {% if lang == 'it' %}
+          {% assign project_title = p.title_it %}
+          {% assign project_role = p.role_it %}
+          {% assign project_summary = p.summary_it %}
+          {% assign project_alt = p.image_alt_it %}
+          {% assign project_path = p.path_it %}
+          {% assign project_year = p.year_it | default: p.year %}
+        {% else %}
+          {% assign project_title = p.title_en %}
+          {% assign project_role = p.role_en %}
+          {% assign project_summary = p.summary_en %}
+          {% assign project_alt = p.image_alt_en %}
+          {% assign project_path = p.path_en %}
+          {% assign project_year = p.year_en | default: p.year %}
+        {% endif %}
+        <article class="project-row">
           <div class="project-media">
-            {% if p.image and p.image != "" %}
+            {% if p.image and p.image != '' %}
               <img src="{{ '/assets/images/' | append: p.image | relative_url }}"
-                   alt="{% if lang == 'it' %}{{ p.title_it }}{% else %}{{ p.title_en }}{% endif %}" loading="lazy">
+                   alt="{{ project_alt | escape }}" width="1386" height="1284" loading="lazy" decoding="async">
             {% else %}
-              <div class="project-placeholder" aria-hidden="true">
-                <span class="ph-grid"></span>
-                <span class="ph-label mono">{{ p.id }}</span>
+              <div class="media-unavailable">
+                <span class="media-code">{{ p.id }}</span>
+                <p>{{ t.projects_no_image }}</p>
               </div>
             {% endif %}
-            <span class="project-year mono">{{ p.year }}</span>
           </div>
-          <div class="project-info">
-            <h3>{% if lang == 'it' %}{{ p.title_it }}{% else %}{{ p.title_en }}{% endif %}</h3>
-            <p class="project-role">{% if lang == 'it' %}{{ p.role_it }}{% else %}{{ p.role_en }}{% endif %}</p>
-            <p>{% if lang == 'it' %}{{ p.summary_it }}{% else %}{{ p.summary_en }}{% endif %}</p>
-            <ul class="chips chips-sm">
-              {% for s in p.stack %}<li class="chip">{{ s }}</li>{% endfor %}
+          <div class="project-content">
+            <div class="project-meta"><span>{{ project_year }}</span><span>{{ project_role }}</span></div>
+            <h3><a href="{{ project_path | relative_url }}">{{ project_title }}</a></h3>
+            <p>{{ project_summary }}</p>
+            <ul class="tag-list" aria-label="{{ t.projects_stack }}">
+              {% for item in p.stack %}<li>{{ item }}</li>{% endfor %}
             </ul>
+            <a class="text-link" href="{{ project_path | relative_url }}">{{ t.projects_view }} <span aria-hidden="true">→</span></a>
           </div>
         </article>
       {% endfor %}

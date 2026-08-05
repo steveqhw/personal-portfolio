@@ -1,16 +1,24 @@
 {% assign t = include.t %}
 {% assign lang = include.lang %}
+{% if lang == 'it' %}
+  {% assign home = '/it/' %}
+  {% assign privacy_url = site.data.site.privacy_url_it %}
+{% else %}
+  {% assign home = '/' %}
+  {% assign privacy_url = site.data.site.privacy_url_en %}
+{% endif %}
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="brand-mark" aria-hidden="true">SQ</span>
+      <strong>Stefano Quagliarella</strong>
       <span>{{ t.footer_built }}</span>
     </div>
-    <div class="footer-links">
+    <nav class="footer-links" aria-label="{% if lang == 'it' %}Navigazione a piè di pagina{% else %}Footer navigation{% endif %}">
       {% if site.data.site.linkedin %}<a href="{{ site.data.site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
       {% if site.data.site.github %}<a href="{{ site.data.site.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
-      <a href="#contact">{{ t.nav_contact }}</a>
-    </div>
+      <a href="{{ home | relative_url }}#contact">{{ t.nav_contact }}</a>
+      <a href="{{ privacy_url | relative_url }}">{{ t.nav_privacy }}</a>
+    </nav>
     <p class="footer-copy">&copy; {{ "now" | date: "%Y" }} Stefano Quagliarella. {{ t.footer_rights }}</p>
   </div>
 </footer>

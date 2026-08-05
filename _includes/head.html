@@ -1,19 +1,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}{% if page.title %} · {{ page.title }}{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{{ include.title | escape }} · {{ site.title | escape }}</title>
+  <meta name="description" content="{{ include.description | strip_html | normalize_whitespace | escape }}">
   <meta name="author" content="{{ site.author }}">
-  <meta name="theme-color" content="#0a0e12">
+  <meta name="theme-color" content="#f2efe6">
+  {% if include.noindex %}<meta name="robots" content="noindex,follow">{% endif %}
 
-  <!-- Open Graph / social -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if include.alternate_en %}<link rel="alternate" hreflang="en" href="{{ include.alternate_en | absolute_url }}">{% endif %}
+  {% if include.alternate_it %}<link rel="alternate" hreflang="it" href="{{ include.alternate_it | absolute_url }}">{% endif %}
+  {% if include.alternate_en %}<link rel="alternate" hreflang="x-default" href="{{ include.alternate_en | absolute_url }}">{% endif %}
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ site.title }} — Embedded Hardware Designer">
-  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ include.title | escape }}">
+  <meta property="og:description" content="{{ include.description | strip_html | normalize_whitespace | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:locale" content="{% if include.lang == 'it' %}it_IT{% else %}en_US{% endif %}">
+  <meta property="og:locale:alternate" content="{% if include.lang == 'it' %}en_US{% else %}it_IT{% endif %}">
+  {% if include.image %}<meta property="og:image" content="{{ include.image | absolute_url }}">{% endif %}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <meta name="twitter:card" content="{% if include.image %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{{ include.title | escape }}">
+  <meta name="twitter:description" content="{{ include.description | strip_html | normalize_whitespace | escape }}">
+  {% if include.image %}<meta name="twitter:image" content="{{ include.image | absolute_url }}">{% endif %}
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
