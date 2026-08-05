@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/it/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/privacy/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/it/privacy/' | absolute_url }}</loc></url>
+  {% for project in site.data.projects %}
+  <url><loc>{{ project.path_en | absolute_url }}</loc></url>
+  <url><loc>{{ project.path_it | absolute_url }}</loc></url>
+  {% endfor %}
+</urlset>

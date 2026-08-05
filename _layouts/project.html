@@ -1,0 +1,103 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.ui[lang] %}
+{% assign project = site.data.projects | where: "id", page.project_id | first %}
+{% if lang == 'it' %}{% assign home = '/it/' %}{% else %}{% assign home = '/' %}{% endif %}
+
+{% if project %}
+  {% if lang == 'it' %}
+    {% assign project_title = project.title_it %}
+    {% assign project_role = project.role_it %}
+    {% assign project_summary = project.summary_it %}
+    {% assign project_context = project.context_it %}
+    {% assign project_facts = project.verified_facts_it %}
+    {% assign project_approach = project.approach_it %}
+    {% assign project_deliverables = project.deliverables_it %}
+    {% assign project_evidence = project.public_evidence_it %}
+    {% assign project_limits = project.evidence_limits_it %}
+    {% assign project_alt = project.image_alt_it %}
+    {% assign project_year = project.year_it | default: project.year %}
+  {% else %}
+    {% assign project_title = project.title_en %}
+    {% assign project_role = project.role_en %}
+    {% assign project_summary = project.summary_en %}
+    {% assign project_context = project.context_en %}
+    {% assign project_facts = project.verified_facts_en %}
+    {% assign project_approach = project.approach_en %}
+    {% assign project_deliverables = project.deliverables_en %}
+    {% assign project_evidence = project.public_evidence_en %}
+    {% assign project_limits = project.evidence_limits_en %}
+    {% assign project_alt = project.image_alt_en %}
+    {% assign project_year = project.year_en | default: project.year %}
+  {% endif %}
+
+  <article class="dossier">
+    <header class="dossier-header">
+      <div class="wrap">
+        <p class="breadcrumb"><a href="{{ home | relative_url }}#work">{{ t.projects_back }}</a> / {{ project.id }}</p>
+        <p class="eyebrow">{{ t.projects_kicker }} / {{ project_year }}</p>
+        <h1>{{ project_title }}</h1>
+        <p class="dossier-summary">{{ project_summary }}</p>
+        <dl class="dossier-meta">
+          <div><dt>{{ t.projects_role }}</dt><dd>{{ project_role }}</dd></div>
+          <div><dt>{{ t.projects_year }}</dt><dd>{{ project_year }}</dd></div>
+          <div><dt>{{ t.projects_stack }}</dt><dd>{{ project.stack | join: ', ' }}</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="wrap dossier-body">
+      <div class="dossier-media">
+        {% if project.image and project.image != '' %}
+          <figure>
+            <img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="{{ project_alt | escape }}" width="1386" height="1284" decoding="async">
+            <figcaption>{{ t.projects_evidence }} / {{ project_title }}</figcaption>
+          </figure>
+        {% else %}
+          <div class="media-unavailable media-unavailable-large">
+            <span class="media-code">{{ project.id }}</span>
+            <p>{{ t.projects_no_image }}</p>
+          </div>
+        {% endif %}
+      </div>
+
+      <section class="dossier-section" aria-labelledby="context-title">
+        <p class="dossier-number">01</p>
+        <div><h2 id="context-title">{% if lang == 'it' %}Contesto{% else %}Context{% endif %}</h2><p>{{ project_context }}</p></div>
+      </section>
+      <section class="dossier-section" aria-labelledby="facts-title">
+        <p class="dossier-number">02</p>
+        <div><h2 id="facts-title">{{ t.projects_verified }}</h2><ul class="evidence-list">{% for item in project_facts %}<li>{{ item }}</li>{% endfor %}</ul></div>
+      </section>
+      <section class="dossier-section" aria-labelledby="approach-title">
+        <p class="dossier-number">03</p>
+        <div><h2 id="approach-title">{{ t.projects_approach }}</h2><ol class="method-list">{% for item in project_approach %}<li>{{ item }}</li>{% endfor %}</ol></div>
+      </section>
+      <section class="dossier-section" aria-labelledby="deliverables-title">
+        <p class="dossier-number">04</p>
+        <div><h2 id="deliverables-title">{{ t.projects_deliverables }}</h2><ul class="evidence-list">{% for item in project_deliverables %}<li>{{ item }}</li>{% endfor %}</ul></div>
+      </section>
+      <section class="dossier-section" aria-labelledby="evidence-title">
+        <p class="dossier-number">05</p>
+        <div><h2 id="evidence-title">{{ t.projects_evidence }}</h2><ul class="evidence-list">{% for item in project_evidence %}<li>{{ item }}</li>{% endfor %}</ul></div>
+      </section>
+      <aside class="evidence-limit" aria-labelledby="limits-title">
+        <p class="dossier-number">06</p>
+        <div><h2 id="limits-title">{{ t.projects_limits }}</h2><p>{{ project_limits }}</p></div>
+      </aside>
+      <div class="dossier-next">
+        <p>{% if lang == 'it' %}Vuoi discutere questo tipo di lavoro?{% else %}Want to discuss work like this?{% endif %}</p>
+        <a class="button button-primary" href="{{ home | relative_url }}#contact">{{ t.hero_cta_secondary }}</a>
+      </div>
+    </div>
+  </article>
+{% else %}
+  <section class="plain-page wrap">
+    <p class="eyebrow">Data contract error</p>
+    <h1>{% if lang == 'it' %}Dossier non disponibile{% else %}Dossier unavailable{% endif %}</h1>
+    <p>{% if lang == 'it' %}L'identificativo del progetto non corrisponde ai dati pubblici.{% else %}The project identifier does not match the public data.{% endif %}</p>
+    <a href="{{ home | relative_url }}#work">{{ t.projects_back }}</a>
+  </section>
+{% endif %}

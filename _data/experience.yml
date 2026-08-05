@@ -1,26 +1,46 @@
-# Esperienza professionale — ruoli da DIPENDENTE (employee), descrizioni GENERICHE.
-# I nomi delle aziende sono omessi per riservatezza.
+# Public trajectory. Employer identities and confidential implementation details
+# are intentionally omitted and may be discussed privately during recruitment.
 
-- role_en: "Electronic Hardware Designer — Employee"
+- id: "electronics-degree"
+  type: "education"
+  role_en: "B.Eng. Electronics Engineering — Full-time studies"
+  role_it: "Laurea in Ingegneria Elettronica — Studi a tempo pieno"
+  employer_en: "Academic development phase"
+  employer_it: "Fase di sviluppo accademico"
+  place_en: "Italy · expected graduation 2027"
+  place_it: "Italia · laurea prevista nel 2027"
+  start: "2024"
+  body_en: "Full-time study focused on strengthening the theoretical foundations behind an established professional hardware practice. The current academic phase develops electronics, electrical engineering and computer architecture knowledge while preserving a clear direction toward embedded hardware R&D."
+  body_it: "Studio a tempo pieno orientato a rafforzare le basi teoriche di un'esperienza hardware professionale già consolidata. L'attuale fase accademica approfondisce elettronica, elettrotecnica e architettura dei calcolatori, mantenendo una direzione chiara verso la R&D hardware embedded."
+  tags: ["Electronics", "Electrical engineering", "Computer architecture"]
+  details_private: false
+
+- id: "medical-robotics"
+  type: "professional"
+  role_en: "Electronic Hardware Designer — Employee"
   role_it: "Progettista Hardware Elettronico — Dipendente"
-  employer_en: "Medical robotics company"
-  employer_it: "Azienda di robotica medicale"
-  place_en: "Brianza (MB), Italy · in-house R&D team"
-  place_it: "Brianza (MB), Italia · team R&D interno"
+  employer_en: "Medical robotics R&D organization"
+  employer_it: "Organizzazione R&D di robotica medicale"
+  place_en: "Northern Italy · in-house R&D team"
+  place_it: "Nord Italia · team R&D interno"
   start: "2023"
   end: "2024"
-  body_en: "As an in-house hardware developer, I designed electronic hardware for a modular robotic platform in the minimally-invasive surgery field. I worked on multilayer and rigid-flex boards with controlled-impedance, GHz-range signal integrity and high-speed digital interfaces, defining requirements, architecture, schematics and PCB activities. I handled board bring-up, SMD rework, functional testing and lab validation, with design under IEC 60601-1 medical safety constraints and coordination of international suppliers."
-  body_it: "Come sviluppatore hardware interno all'azienda, ho progettato hardware elettronico per una piattaforma robotica modulare nell'ambito della chirurgia mininvasiva. Ho lavorato su schede multistrato e rigid-flex con impedenza controllata, signal integrity in banda GHz e interfacce digitali ad alta velocità, definendo requisiti, architettura, schematici e attività di PCB. Mi sono occupato di bring-up scheda, rework SMD, test funzionali e validazione in laboratorio, con progettazione secondo i vincoli di sicurezza medicale IEC 60601-1 e coordinamento di fornitori internazionali."
-  tags: ["Altium", "Rigid-flex", "High-speed", "IEC 60601-1", "Bring-up"]
+  body_en: "Designed electronic hardware for a modular minimally invasive surgery platform. Work included requirements, hardware architecture, schematics and PCB activities for multilayer and rigid-flex boards, controlled-impedance routing and high-speed digital interfaces, followed by bring-up, SMD rework, functional testing and laboratory validation under IEC 60601-1 design constraints."
+  body_it: "Progettazione di hardware elettronico per una piattaforma modulare di chirurgia mininvasiva. Le attività hanno incluso requisiti, architettura hardware, schematici e PCB per schede multistrato e rigid-flex, routing a impedenza controllata e interfacce digitali ad alta velocità, seguiti da bring-up, rework SMD, test funzionali e validazione in laboratorio secondo vincoli progettuali IEC 60601-1."
+  tags: ["Altium Designer", "Rigid-flex", "High-speed digital", "IEC 60601-1", "Bring-up"]
+  details_private: true
 
-- role_en: "Electronic Hardware Designer — Employee"
+- id: "airfield-lighting"
+  type: "professional"
+  role_en: "Electronic Hardware Designer — Employee"
   role_it: "Progettista Hardware Elettronico — Dipendente"
-  employer_en: "Airfield ground lighting company"
-  employer_it: "Azienda di illuminazione aeroportuale"
-  place_en: "Brianza (MB), Italy · in-house R&D & production"
-  place_it: "Brianza (MB), Italia · R&D e produzione interni"
+  employer_en: "Airfield ground-lighting organization"
+  employer_it: "Organizzazione per l'illuminazione aeroportuale"
+  place_en: "Northern Italy · in-house R&D and production"
+  place_it: "Nord Italia · R&D e produzione interne"
   start: "2021"
   end: "2023"
-  body_en: "As a full-time employee, I developed, improved and tested electronic systems for airfield ground lighting control and monitoring. I worked on power electronics, high-voltage AC loads, RMS/power measurement and control boards, with hands-on prototype assembly, SMD soldering, microscope rework and production testing to IPC workmanship practices. I handled troubleshooting, validation, supplier relationships, BOM and shortage management in a safety-relevant industrial environment."
-  body_it: "Come dipendente a tempo pieno, ho sviluppato, migliorato e testato sistemi elettronici per il controllo e il monitoraggio dell'illuminazione aeroportuale a terra. Ho lavorato su elettronica di potenza, carichi AC ad alta tensione, misura RMS/potenza e schede di controllo, con assemblaggio prototipi, saldatura SMD, rework al microscopio e test di produzione secondo le pratiche IPC. Mi sono occupato di troubleshooting, validazione, rapporti con i fornitori, gestione BOM e shortage in un contesto industriale rilevante per la sicurezza."
-  tags: ["Power electronics", "High-voltage", "RMS/Power", "RS485/MODBUS", "IPC"]
+  body_en: "Developed, improved and tested electronic systems for airfield ground-lighting control and monitoring. The role covered power electronics, high-voltage AC loads, RMS and power measurement, control boards, prototype assembly, production testing, troubleshooting, supplier coordination and BOM management in a safety-relevant industrial context."
+  body_it: "Sviluppo, miglioramento e test di sistemi elettronici per il controllo e il monitoraggio dell'illuminazione aeroportuale. Il ruolo ha incluso elettronica di potenza, carichi AC ad alta tensione, misura RMS e di potenza, schede di controllo, assemblaggio prototipi, test di produzione, troubleshooting, coordinamento fornitori e gestione BOM in un contesto industriale rilevante per la sicurezza."
+  tags: ["Power electronics", "High voltage", "RMS/Power", "RS485/MODBUS", "IPC practices"]
+  details_private: true

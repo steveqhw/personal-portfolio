@@ -1,37 +1,50 @@
-# Servizi offerti (freelance). num = etichetta mono, icona = nome svg in main.js/CSS (opzionale)
+# Recruiter-oriented capability groups. Content is factual and avoids claims of
+# certification or performance that are not supported by public evidence.
 
-- num: "01"
-  title_en: "PCB design & layout"
-  title_it: "Progettazione e layout PCB"
-  body_en: "Multilayer and rigid-flex boards, high-speed digital, controlled impedance and signal integrity. Schematic capture and layout in Altium Designer and KiCad, ready for manufacturing (DFM/DFA/DFT)."
-  body_it: "Schede multistrato e rigid-flex, digitale ad alta velocità, impedenza controllata e signal integrity. Schematico e layout in Altium Designer e KiCad, pronti per la produzione (DFM/DFA/DFT)."
+- id: "design"
+  num: "01"
+  title_en: "Hardware architecture, schematic and PCB"
+  title_it: "Architettura hardware, schematico e PCB"
+  body_en: "Requirements interpretation, component selection, schematic design and PCB work for multilayer and rigid-flex boards, including high-speed digital interfaces, controlled impedance and design-for-manufacture considerations."
+  body_it: "Interpretazione dei requisiti, selezione componenti, progettazione dello schematico e attività PCB per schede multistrato e rigid-flex, incluse interfacce digitali ad alta velocità, impedenza controllata e considerazioni per la producibilità."
+  evidence_tags: ["Altium Designer", "KiCad", "Multilayer PCB", "Rigid-flex"]
 
-- num: "02"
-  title_en: "Prototyping & bring-up"
-  title_it: "Prototipazione e bring-up"
-  body_en: "Prototype assembly, SMD soldering and microscope rework, bodge wires, board-level fixes and firmware bring-up to get your first boards alive and trustworthy."
-  body_it: "Assemblaggio prototipi, saldatura SMD e rework al microscopio, bodge wire, fix a livello scheda e bring-up firmware per rendere vive e affidabili le prime schede."
+- id: "prototype"
+  num: "02"
+  title_en: "Prototype and board bring-up"
+  title_it: "Prototipo e bring-up della scheda"
+  body_en: "Hands-on prototype assembly support, SMD soldering, microscope rework, board-level modifications and bring-up firmware used to turn first articles into diagnosable hardware."
+  body_it: "Supporto pratico all'assemblaggio dei prototipi, saldatura SMD, rework al microscopio, modifiche a livello scheda e firmware di bring-up per rendere i primi campioni hardware diagnosticabili."
+  evidence_tags: ["SMD rework", "Board bring-up", "Embedded C/C++"]
 
-- num: "03"
-  title_en: "Testing & validation"
-  title_it: "Test e validazione"
-  body_en: "Functional and production testing, lab debugging with oscilloscope, logic analyzer, VNA, spectrum analyzer and EMI pre-compliance. Clear test procedures and technical reports."
-  body_it: "Test funzionali e di produzione, debug in laboratorio con oscilloscopio, analizzatore logico, VNA, analizzatore di spettro ed EMI pre-compliance. Procedure di test e report tecnici chiari."
+- id: "validation"
+  num: "03"
+  title_en: "Laboratory test and validation"
+  title_it: "Test e validazione in laboratorio"
+  body_en: "Functional debugging and validation with oscilloscopes, logic analyzers, VNA, spectrum analyzer and EMI pre-compliance equipment, supported by test procedures and technical reporting."
+  body_it: "Debug funzionale e validazione con oscilloscopi, analizzatori logici, VNA, analizzatore di spettro e strumentazione EMI pre-compliance, supportati da procedure di test e report tecnici."
+  evidence_tags: ["Oscilloscope", "Logic analyzer", "VNA", "EMI pre-compliance"]
 
-- num: "04"
-  title_en: "Embedded firmware"
-  title_it: "Firmware embedded"
-  body_en: "Embedded C/C++ for microcontroller-based systems and board bring-up. Drivers for I2C, SPI, UART, CAN, RS485 and sensor interfaces, with AI-assisted review under direct technical ownership."
-  body_it: "C/C++ embedded per sistemi a microcontrollore e bring-up scheda. Driver per I2C, SPI, UART, CAN, RS485 e interfacce sensori, con review AI-assistita sotto pieno controllo tecnico."
+- id: "firmware"
+  num: "04"
+  title_en: "Embedded firmware for hardware integration"
+  title_it: "Firmware embedded per l'integrazione hardware"
+  body_en: "Embedded C/C++ for microcontroller-based board bring-up, peripheral integration and hardware validation across common serial and industrial interfaces."
+  body_it: "C/C++ embedded per bring-up di schede a microcontrollore, integrazione delle periferiche e validazione hardware su comuni interfacce seriali e industriali."
+  evidence_tags: ["I2C", "SPI", "UART", "CAN", "RS485"]
 
-- num: "05"
-  title_en: "3D modeling & enclosures"
-  title_it: "Modellazione 3D ed enclosure"
-  body_en: "Custom enclosures, housings, PCB supports and connector panels designed in SolidWorks / Fusion and 3D printed — real mechanical integration, not just the board."
-  body_it: "Enclosure custom, housing, supporti PCB e pannelli connettori progettati in SolidWorks / Fusion e stampati in 3D — integrazione meccanica reale, non solo la scheda."
+- id: "mechanical"
+  num: "05"
+  title_en: "Mechanical integration and enclosures"
+  title_it: "Integrazione meccanica ed enclosure"
+  body_en: "3D modelling and additive manufacturing for custom housings, PCB supports and connector panels, with attention to cabling, assembly and physical fit."
+  body_it: "Modellazione 3D e produzione additiva per housing custom, supporti PCB e pannelli connettori, con attenzione a cablaggi, assemblaggio e integrazione fisica."
+  evidence_tags: ["SolidWorks", "Autodesk Fusion", "FDM 3D print"]
 
-- num: "06"
-  title_en: "Sourcing & documentation"
-  title_it: "Sourcing e documentazione"
-  body_en: "BOM management, component selection and alternatives, supplier coordination, shortage handling and complete technical documentation following IPC workmanship practices."
-  body_it: "Gestione BOM, selezione componenti e alternative, coordinamento fornitori, gestione shortage e documentazione tecnica completa secondo le pratiche IPC."
+- id: "production"
+  num: "06"
+  title_en: "Production and documentation support"
+  title_it: "Supporto a produzione e documentazione"
+  body_en: "BOM management, component alternatives, supplier coordination, production testing and technical documentation informed by IPC workmanship practices."
+  body_it: "Gestione BOM, componenti alternativi, coordinamento fornitori, test di produzione e documentazione tecnica basati sulle pratiche di lavorazione IPC."
+  evidence_tags: ["BOM", "Sourcing", "DFM/DFA/DFT", "IPC practices"]

@@ -1,31 +1,30 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign t = site.data.ui[lang] %}
-<section class="section" id="experience">
+<section class="section" id="trajectory" aria-labelledby="trajectory-title">
   <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker"><span class="kicker-num">03</span>{{ t.experience_kicker }}</p>
-      <h2 class="section-title">{{ t.experience_title }}</h2>
-      <p class="section-lead">{{ t.experience_lead }}</p>
-    </div>
-
+    <header class="section-heading">
+      <p class="section-index">04 / {{ t.experience_kicker }}</p>
+      <div>
+        <h2 id="trajectory-title">{{ t.experience_title }}</h2>
+        <p>{{ t.experience_lead }}</p>
+      </div>
+    </header>
     <ol class="timeline">
       {% for job in site.data.experience %}
-        <li class="timeline-item reveal">
-          <div class="timeline-period">
-            <span class="mono">{{ job.start }} — {% if job.end %}{{ job.end }}{% else %}{{ t.experience_present }}{% endif %}</span>
-          </div>
-          <div class="timeline-body">
-            <h3>{% if lang == 'it' %}{{ job.role_it }}{% else %}{{ job.role_en }}{% endif %}
-              <span class="at">· {% if lang == 'it' %}{{ job.employer_it }}{% else %}{{ job.employer_en }}{% endif %}</span>
-            </h3>
-            <p class="timeline-place">{% if lang == 'it' %}{{ job.place_it }}{% else %}{{ job.place_en }}{% endif %}</p>
+        <li class="timeline-item{% if job.type == 'education' %} timeline-education{% endif %}"{% if job.type == 'education' %} id="education"{% endif %}>
+          <p class="timeline-period">{{ job.start }} — {% if job.end %}{{ job.end }}{% else %}{{ t.experience_present }}{% endif %}</p>
+          <div>
+            <p class="record-type">{% if job.type == 'education' %}{{ t.nav_education }}{% else %}{% if lang == 'it' %}Esperienza professionale{% else %}Professional experience{% endif %}{% endif %}</p>
+            <h3>{% if lang == 'it' %}{{ job.role_it }}{% else %}{{ job.role_en }}{% endif %}</h3>
+            <p class="timeline-organization">{% if lang == 'it' %}{{ job.employer_it }} · {{ job.place_it }}{% else %}{{ job.employer_en }} · {{ job.place_en }}{% endif %}</p>
             <p>{% if lang == 'it' %}{{ job.body_it }}{% else %}{{ job.body_en }}{% endif %}</p>
-            <ul class="chips chips-sm">
-              {% for tag in job.tags %}<li class="chip">{{ tag }}</li>{% endfor %}
+            <ul class="tag-list">
+              {% for tag in job.tags %}<li>{{ tag }}</li>{% endfor %}
             </ul>
           </div>
         </li>
       {% endfor %}
     </ol>
+    <p class="private-note">{{ t.experience_details_private }}</p>
   </div>
 </section>

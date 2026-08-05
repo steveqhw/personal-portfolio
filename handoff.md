@@ -1,354 +1,62 @@
-# Handoff per Claude Code
+# Handoff tecnico — portfolio Jekyll
 
-Aggiornato: 2026-06-11
+Aggiornato: 2026-08-05
 
-## Obiettivo del progetto
+## Stato architetturale
 
-Questa repository contiene il portfolio personale di un hardware designer.
-Il sito deve essere pubblicato tramite GitHub Pages e Jekyll.
+Il portfolio usa Jekyll nativo su GitHub Pages. L'esperienza inglese vive alla root e quella italiana sotto `/it/`. Layout e include sono condivisi; i contenuti bilingui sono in `_data/` e i dossier sono pagine leggere selezionate tramite `project_id`.
 
-L'obiettivo estetico dichiarato e' uno stile classico, simile ai primi siti HTML statici:
+La direzione visiva autorevole è un dossier tecnico-editoriale: tipografia di sistema, regole nette, colore industriale contenuto, evidenze e limiti dichiarati. Non reintrodurre gradienti, glow, glass effect, animazioni reveal, font di rete o navigazione mobile dipendente da JavaScript.
 
-- plain and simple;
-- nessuna transizione;
-- nessuna ombra;
-- nessuna grafica moderna;
-- niente componenti in stile landing page;
-- contenuto tecnico leggibile e diretto.
+## Contratti da preservare
 
-Il sito deve presentare progetti hardware, schede, prototipi, note di progettazione, layout PCB, test e risultati.
+- Route home: `/` e `/it/`.
+- Route dossier: tre coppie dichiarate in `_data/projects.yml`.
+- Route privacy: `/privacy/` e `/it/privacy/`.
+- Lingua: `page.lang` uguale a `en` o `it`; ogni pagina pubblica dichiara il counterpart.
+- URL: usare sempre `relative_url` o `absolute_url` per rispettare `baseurl`.
+- Formspree: metodo POST; campi `name`, `email`, `message`, `_language`, `_gotcha`.
+- Social: mantenere LinkedIn e GitHub da `_data/site.yml`.
+- Riservatezza: nessun datore di lavoro, telefono, email privata, CV o dettaglio tecnico confidenziale nel prodotto pubblico.
+- Dossier: separare contesto, fatti verificati, approccio, elementi realizzati, evidenza pubblica e limiti.
 
-## Stato attuale
+## File principali
 
-E' stata creata una fondazione Jekyll minimale e gia' pushata su GitHub.
+- `_layouts/default.html`: risolve locale, metadata, canonical, alternate e shell.
+- `_layouts/project.html`: trova il record tramite ID e renderizza il dossier.
+- `_includes/header.html`: navigazione sempre visibile e cambio lingua puntuale.
+- `_includes/sections/*.html`: home recruiter-first nell'ordine selected work, profile, capabilities, trajectory, contact.
+- `assets/css/style.css`: responsive 320–1440 px, focus visibile e stampa.
+- `robots.txt` e `sitemap.xml`: generati con `absolute_url`.
 
-Repository remota:
+Non esiste uno script frontend: modulo, route, navigazione e contenuti funzionano nativamente.
 
-```text
-https://github.com/steveqhw/personal-portfolio.git
-```
+## Aggiungere o modificare un dossier
 
-Branch usato:
+1. Aggiornare il record in `_data/projects.yml` mantenendo tutti i campi EN/IT.
+2. Aggiungere le due pagine con front matter sotto `work/` e `it/work/`.
+3. Impostare lo stesso `project_id`, permalink, counterpart e alternate URL.
+4. Aggiungere solo immagini approvate, con alt localizzati e dimensioni HTML coerenti.
+5. Aggiornare `sitemap.xml` solo se la route non deriva dall'iterazione sui progetti.
 
-```text
-main
-```
+## Verifiche prima del rilascio
 
-Commit principale gia' pushato:
-
-```text
-115e6a1 Create Jekyll portfolio foundation
-```
-
-Nota: dopo la creazione di questo handoff, ci sara' almeno una modifica locale non ancora inclusa nel commit precedente, cioe' questo file `handoff.md`.
-
-## Struttura del sito
-
-File principali creati:
-
-```text
-_config.yml
-Gemfile
-.gitignore
-README.md
-index.md
-projects.md
-about.md
-contact.md
-_includes/header.html
-_includes/footer.html
-_layouts/default.html
-_layouts/project.html
-_projects/progetto-di-esempio.md
-assets/css/style.css
-```
-
-## Configurazione Jekyll
-
-Il sito usa Jekyll senza tema esterno.
-
-In `_config.yml` sono impostati:
-
-- titolo: `Portfolio Hardware`;
-- descrizione: `Portfolio personale di progetti hardware`;
-- collection `projects`;
-- permalink puliti;
-- layout predefinito `project` per i file nella collection `_projects`.
-
-La configurazione attuale usa:
-
-```yml
-baseurl: "/personal-portfolio"
-```
-
-Questa scelta e' corretta per una GitHub project page pubblicata sotto:
-
-```text
-https://<username>.github.io/personal-portfolio/
-```
-
-Se il sito verra' pubblicato con dominio personalizzato oppure come repository `username.github.io`, cambiare in:
-
-```yml
-baseurl: ""
-```
-
-## Pagine esistenti
-
-### `index.md`
-
-Home page del portfolio.
-Contiene una breve introduzione e mostra fino a 3 progetti dalla collection `site.projects`.
-
-### `projects.md`
-
-Archivio dei progetti.
-Itera su `site.projects` e linka le pagine dei singoli progetti.
-
-### `about.md`
-
-Pagina profilo.
-Contiene testo segnaposto su competenze e metodo.
-
-### `contact.md`
-
-Pagina contatti.
-Contiene placeholder per email, GitHub e LinkedIn.
-
-### `_projects/progetto-di-esempio.md`
-
-Template iniziale per un progetto hardware.
-Le sezioni presenti sono:
-
-- Sintesi;
-- Obiettivo;
-- Architettura;
-- Scelte progettuali;
-- PCB;
-- Test;
-- File e riferimenti.
-
-Questo file va considerato un modello da sostituire o duplicare per i progetti reali.
-
-## Layout e include
-
-### `_layouts/default.html`
-
-Layout HTML principale.
-Include:
-
-- `head` minimale;
-- meta viewport;
-- titolo pagina;
-- CSS custom;
-- header;
-- contenuto;
-- footer.
-
-### `_layouts/project.html`
-
-Layout dedicato ai progetti.
-Mostra una tabella con metadata del progetto:
-
-- anno;
-- categoria;
-- stato.
-
-Poi renderizza il contenuto Markdown del progetto.
-
-### `_includes/header.html`
-
-Header comune con:
-
-- titolo sito;
-- descrizione;
-- navigazione principale;
-- separatore orizzontale.
-
-### `_includes/footer.html`
-
-Footer comune con copyright e data di aggiornamento generata da Jekyll.
-
-## Stile CSS
-
-File:
-
-```text
-assets/css/style.css
-```
-
-Scelte attuali:
-
-- font serif classico: Georgia / Times;
-- sfondo bianco;
-- testo nero;
-- link blu e viola visitato, stile web classico;
-- larghezza contenuto massima di circa 900px;
-- tabelle con bordi neri semplici;
-- nessuna ombra;
-- nessuna animazione;
-- nessuna transizione;
-- nessun framework CSS;
-- responsive minimo per mobile.
-
-Mantenere questo registro visivo anche nelle prossime modifiche.
-
-## Istruzioni per aggiungere progetti
-
-Creare un nuovo file Markdown in `_projects/`.
-
-Esempio:
-
-```md
----
-title: "Nome progetto"
-year: "2026"
-category: "PCB design"
-status: "Completato"
-summary: "Breve descrizione del progetto."
----
-
-## Sintesi
-
-Descrizione sintetica del progetto.
-
-## Obiettivo
-
-Problema tecnico o funzionale affrontato.
-
-## Architettura
-
-Blocchi principali del sistema.
-
-## Scelte progettuali
-
-Decisioni tecniche rilevanti.
-
-## PCB
-
-Note su layout, vincoli e routing.
-
-## Test
-
-Misure, strumenti e risultati.
-```
-
-## Verifiche gia' fatte
-
-E' stato eseguito:
-
-```text
+```sh
+bundle exec jekyll build
 git diff --check
 ```
 
-Risultato: nessun errore di whitespace.
+Verificare inoltre:
 
-Non e' stato possibile eseguire localmente:
+- parità delle chiavi e degli array EN/IT;
+- unicità di ID, slug e path;
+- corrispondenza dei `project_id`;
+- endpoint/campi Formspree;
+- canonical, hreflang e counterpart generati;
+- assenza di PII, nomi dei datori di lavoro e file privati;
+- navigazione da tastiera, 320/768/1440 px e zoom testo 200%;
+- resa senza JavaScript e con immagini disabilitate.
 
-```text
-bundle exec jekyll build
-```
+## Limiti operativi
 
-Motivo: nella shell usata in precedenza non erano disponibili `ruby` e `bundle`.
-
-Prima di pubblicare modifiche future importanti, installare Ruby/Bundler oppure usare il build di GitHub Pages come verifica remota.
-
-## Prossimi passi consigliati
-
-1. Sostituire i placeholder personali.
-
-   Aggiornare:
-
-   - `site.author` in `_config.yml`;
-   - testo della home;
-   - `about.md`;
-   - `contact.md`;
-   - link GitHub/LinkedIn/email.
-
-2. Decidere la struttura dei contenuti dei progetti.
-
-   Ogni progetto hardware dovrebbe avere almeno:
-
-   - contesto;
-   - obiettivo;
-   - architettura;
-   - schema a blocchi, se disponibile;
-   - componenti principali;
-   - note sullo schema elettrico;
-   - note sul PCB;
-   - bring-up;
-   - test;
-   - risultati;
-   - immagini o file pubblicabili.
-
-3. Aggiungere asset statici.
-
-   Creare, se necessario:
-
-   ```text
-   assets/images/
-   assets/files/
-   ```
-
-   Usarli per immagini di PCB, render, foto banco prova, diagrammi, PDF o datasheet pubblicabili.
-
-4. Migliorare la navigazione mantenendo lo stile classico.
-
-   Possibili aggiunte:
-
-   - pagina `notes.md` per note tecniche;
-   - pagina `tools.md` per strumenti usati;
-   - indice per anno o categoria;
-   - tabella progetti invece della lista, se il numero cresce.
-
-5. Validare GitHub Pages.
-
-   Controllare nelle impostazioni della repository:
-
-   - Pages abilitato;
-   - branch `main`;
-   - sorgente corretta;
-   - URL generato;
-   - coerenza del `baseurl`.
-
-## Vincoli da rispettare
-
-- Non introdurre framework frontend.
-- Non aggiungere animazioni o transizioni.
-- Non usare layout moderni tipo hero, card, gradienti o sezioni marketing.
-- Non usare shadow, blur, glassmorphism o componenti decorativi.
-- Preferire HTML semantico e Markdown semplice.
-- Mantenere il sito facile da leggere anche senza JavaScript.
-- Usare JavaScript solo se davvero necessario; al momento non serve.
-- Trattare il portfolio come documentazione tecnica pubblica, non come landing page.
-
-## Nota operativa per Claude Code
-
-Partire da questo handoff e leggere questi file prima di modificare:
-
-```text
-_config.yml
-_layouts/default.html
-_layouts/project.html
-assets/css/style.css
-index.md
-projects.md
-_projects/progetto-di-esempio.md
-README.md
-```
-
-Prima di fare commit o push:
-
-```text
-git status -sb
-git diff --check
-```
-
-Se Ruby e Bundler sono disponibili:
-
-```text
-bundle install
-bundle exec jekyll build
-```
-
-Se il build non e' disponibile localmente, indicare chiaramente che la verifica Jekyll non e' stata eseguita.
+Il repository non contiene un backend, analytics o gestione locale del consenso. Formspree è un confine esterno e gestisce consegna e conservazione dei messaggi secondo la propria configurazione. Il rollback consiste nel ripristino Git di una revisione nota e in un nuovo deploy Pages.

@@ -1,21 +1,25 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign t = site.data.ui[lang] %}
-<section class="section section-alt" id="services">
+<section class="section" id="capabilities" aria-labelledby="capabilities-title">
   <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker"><span class="kicker-num">02</span>{{ t.services_kicker }}</p>
-      <h2 class="section-title">{{ t.services_title }}</h2>
-      <p class="section-lead">{{ t.services_lead }}</p>
-    </div>
-
-    <div class="cards">
+    <header class="section-heading">
+      <p class="section-index">03 / {{ t.services_kicker }}</p>
+      <div>
+        <h2 id="capabilities-title">{{ t.services_title }}</h2>
+        <p>{{ t.services_lead }}</p>
+      </div>
+    </header>
+    <ol class="capability-list">
       {% for s in site.data.services %}
-        <article class="card service-card reveal">
-          <span class="card-num">{{ s.num }}</span>
+        <li class="capability-item">
+          <span class="capability-number">{{ s.num }}</span>
+          <div>
           <h3>{% if lang == 'it' %}{{ s.title_it }}{% else %}{{ s.title_en }}{% endif %}</h3>
           <p>{% if lang == 'it' %}{{ s.body_it }}{% else %}{{ s.body_en }}{% endif %}</p>
-        </article>
+          <ul class="tag-list">{% for tag in s.evidence_tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+          </div>
+        </li>
       {% endfor %}
-    </div>
+    </ol>
   </div>
 </section>
